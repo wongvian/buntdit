@@ -8,7 +8,7 @@ import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class PunditserviceService {
-  urlr = 'https://abc.com/api/bundit';
+  urlr = 'https://bundit.snru.ac.th/api/bundit';
   constructor(private http: HttpClient) { }
 
   getsongall(): Observable<any> {

@@ -1,6 +1,6 @@
 
-   <h3> <p class="text-center mt-3" >ตรวจสอบเลขที่นั่งบัณฑิต (วันฝึกซ้อม)</p> </h3>
- 
+   <h3> <p class="text-center mt-3" >ตรวจสอบเลขที่นั่งบัณฑิต มหาวิทยาลัยราชภัฏสกลนคร ประจำปี พ.ศ. 2560</p> </h3>
+
 <div class="row mt-2 mr-2 ml-2">
   <div class="input-group mb-3">
     <input #xx type="text" (keyup)="onkey($event)" class="form-control" placeholder="ค้นหา รหัสนักศึกษา ชื่อ สกุล" aria-label="ค้นหา รหัสนักศึกษา ชื่อ สกุล" aria-describedby="basic-addon2">
@@ -42,7 +42,7 @@
 <!--Pagination-->
   <ul *ngIf="pager.pages && pager.pages.length" class="pagination pg-blue justify-content-center mb-0">
 
-      
+
       <!--First-->
       <li [ngClass]="{'page-item disabled':pager.currentPage === 1}" ><a (click)="setPage(1)" class="page-link"  >First</a></li>
 
@@ -57,7 +57,7 @@
       <li *ngFor="let page of pager.pages" [ngClass]="{'page-item active':pager.currentPage === page}">
           <a (click)="setPage(page)" class="page-link" >{{page}}</a>
       </li>
-     
+
       <li [ngClass]="{'page-item disabled':pager.currentPage === pager.totalPages}">
           <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
               <span aria-hidden="true">&raquo;</span>
