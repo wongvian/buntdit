@@ -1,0 +1,73 @@
+
+   <h3> <p class="text-center mt-3" >ตรวจสอบเลขที่นั่งบัณฑิต มหาวิทยาลัยราชภัฏสกลนคร ประจำปี พ.ศ. 2560</p> </h3>
+
+<div class="row mt-2 mr-2 ml-2">
+  <div class="input-group mb-3">
+    <input #xx type="text" (keyup)="onkey($event)" class="form-control" placeholder="ค้นหา รหัสนักศึกษา ชื่อ สกุล" aria-label="ค้นหา รหัสนักศึกษา ชื่อ สกุล" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-info" (click)="onkeyx(xx.value)" type="button"><i class="fa fa-search prefix"></i> ค้นหา</button>
+    </div>
+  </div>
+</div>
+
+<table id="example" class="table table-hover table-striped table-sm">
+  <thead class="thead-dark">
+    <tr>
+      <th class="text-center" >#</th>
+      <th class="text-center" >รหัสนักศึกษา</th>
+      <th class="text-center">ชื่อ-สกุล</th>
+      <th class="text-center">ดู</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td class="text-center"  colspan="4"><span *ngIf="isLoading"> กำลังโหลด.. </span><div class="progress-bar">
+      </div> </td></tr>
+    <tr *ngFor="let rec of pagedItems; let i = index">
+      <td class="text-center">{{ (pager.currentPage*15) - 14 + i}}</td>
+      <td class="text-center">
+        <a class="text-primary" [routerLink]="['view/', rec.STUDENT_ID]"> {{rec.STUDENT_ID}}</a>
+      </td>
+      <td class="text-left" > <a class="text-dark" [routerLink]="['view/', rec.STUDENT_ID]"> {{rec.PNAME}}{{rec.FULLNAME}} </a></td>
+      <td class="text-center"> <a class="text-primary" [routerLink]="['view/', rec.STUDENT_ID]"> <i class="fa fa-search"></i> </a> </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<div class="row">
+  <div class="col-lg-12 text-center">
+ <span class="text-muted" >รายชื่อทั้งหมด {{pager.totalItems}} เรคคอร์ด </span>
+<!--Pagination-->
+  <ul *ngIf="pager.pages && pager.pages.length" class="pagination pg-blue justify-content-center mb-0">
+
+
+      <!--First-->
+      <li [ngClass]="{'page-item disabled':pager.currentPage === 1}" ><a (click)="setPage(1)" class="page-link"  >First</a></li>
+
+      <!--Arrow left-->
+      <li [ngClass]="{'page-item disabled':pager.currentPage === 1}">
+          <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+          </a>
+      </li>
+
+      <li *ngFor="let page of pager.pages" [ngClass]="{'page-item active':pager.currentPage === page}">
+          <a (click)="setPage(page)" class="page-link" >{{page}}</a>
+      </li>
+
+      <li [ngClass]="{'page-item disabled':pager.currentPage === pager.totalPages}">
+          <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+          </a>
+      </li>
+
+       <!--Last-->
+       <li [ngClass]="{'page-item disabled':pager.currentPage === pager.totalPages}"><a (click)="setPage(pager.totalPages)"  class="page-link">Last</a></li>
+
+  </ul>
+  </div>
+</div>
