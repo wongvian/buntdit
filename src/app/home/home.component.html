@@ -9,11 +9,14 @@
     <li class="list-group-item">1.กำหนดการฝึกซ้อม ม.ราชภัฏสกลนคร ระหว่างวันที่ 4-6 ตุลาคม 2562</li>
     <li class="list-group-item">2.พิธีพระราชทานปริญญาบัตร กลุ่มมหาวิทยาลัยราชภัฏเขตภาคตะวันออกเฉียงเหนือ  ระหว่างวันที่ 14 -19 ตุลาคม 2562(รับจริง)</li>
     <li class="list-group-item">3.รายละเอียดอื่นๆ เช่น ระบบการเช่าชุดครุย จองภาพหมู่บัณฑิต และระบบการยืนยันการเข้ารับพระราชทานปริญญาบัตร ขณะนี้ อยู่ในระหว่างการดำเนินการและประสานส่วนที่เกี่ยวข้อง มหาวิทยาลัยจะทยอยอัพเดทระบบอย่างต่อเนื่อง</li>
+    <li class="list-group-item">  <a href="assets/doc/form_next.pdf">ดาวน์โหลดแบบฟอร์มขอเลื่อนการเข้าร่วมพิธีพระราชทานปริญญาบัตร</a></li>
   </ul>
 
       </div>
     </div>
   </div>
+
+
 
 <div class="row mt-2 mr-2 ml-2">
   <div class="input-group mb-3">
@@ -30,7 +33,8 @@
       <th class="text-center" >#</th>
       <th class="text-center" >รหัสนักศึกษา</th>
       <th class="text-center">ชื่อ-สกุล</th>
-      <th class="text-center">ดู</th>
+      <th class="text-center">จองภาพหมู่บัณฑิต/เช่าชุดครุย/ยืนยันการเข้ารับ</th>
+      <th class="text-center">รายละเอียด</th>
 
     </tr>
   </thead>
@@ -43,6 +47,7 @@
         <a class="text-primary" [routerLink]="['view/', rec.STUDENT_ID]"> {{rec.STUDENT_ID}}</a>
       </td>
       <td class="text-left" > <a class="text-dark" [routerLink]="['view/', rec.STUDENT_ID]"> {{rec.PNAME}}{{rec.FULLNAME}} </a></td>
+      <td class="text-center"> <a class="text-primary" [routerLink]="['view/', rec.STUDENT_ID]">จอง</a> </td>
       <td class="text-center"> <a class="text-primary" [routerLink]="['view/', rec.STUDENT_ID]"> <i class="fa fa-search"></i> </a> </td>
     </tr>
   </tbody>
