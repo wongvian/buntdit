@@ -46,7 +46,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td class="text-center"  colspan="4"><span *ngIf="isLoading"> กำลังโหลด.. </span><div class="progress-bar">
+    <tr><td class="text-center"  colspan="5"><span *ngIf="isLoading"> กำลังโหลด.. </span><div class="progress-bar">
       </div> </td></tr>
     <tr *ngFor="let rec of pagedItems; let i = index">
       <td class="text-center">{{ (pager.currentPage*15) - 14 + i}}</td>
