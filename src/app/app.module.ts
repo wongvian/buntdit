@@ -41,7 +41,9 @@ import { RedirectComponent } from './redirect/redirect.component';
       { path: '#/view/:id', component: ViewComponent },
 */
       { path: 'view/:id', component: ViewComponent },
-      { path: '**', component:RedirectComponent }
+      
+      { path: '**', redirectTo: '/',
+      pathMatch: 'full' }
     ])
   ],
   providers: [PagerService, PunditserviceService],

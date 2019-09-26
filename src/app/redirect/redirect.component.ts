@@ -10,7 +10,7 @@ export class RedirectComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    window.location.href = 'https://bundit.snru.ac.th'
+    window.location.href = 'https://reg.snru.ac.th'
   }
 
 }
