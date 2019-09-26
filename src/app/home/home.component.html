@@ -25,14 +25,14 @@
             href="assets/doc/ส.ราชภัฏ-ที่ปรึกษาราชภัฏ.pdf">1.พิธีพระราชทานปริญญาบัตร กลุ่มมหาวิทยาลัยราชภัฏเขตภาคตะวันออกเฉียงเหนือ
             มีการเปลี่ยนแปลง จะแจ้งให้ทราบในโอกาสต่อไป</a></li>
         <li class="list-group-item">2.กำหนดการฝึกซ้อมและรับจริง มีการเปลี่ยนแปลง จะแจ้งให้ทราบในโอกาสต่อไป</li>
-        <li class="list-group-item">3.ให้บัณฑิต
+        <!-- <li class="list-group-item">3.ให้บัณฑิต
           นำเอกสารใบนำรายงานตัวบัณฑิตมายื่นชำระเงินค่าเช่าชุดครุยและจองภาพหมู่บัณฑิต ที่งานคลัง ม.ราชภัฏสกลนคร
-          ระหว่างวันที่ 11 กันยายน - เป็นต้นไป (เวลา 08.30 น - 15.30 น. ก่อนวันฝึกซ้อม)</li>
+          ระหว่างวันที่ 11 กันยายน - เป็นต้นไป (เวลา 08.30 น - 15.30 น. ก่อนวันฝึกซ้อม)</li> -->
 
-        <li class="list-group-item">4.รายละเอียดอื่นๆ เช่น ระบบการเช่าชุดครุย จองภาพหมู่บัณฑิต อยู่ในใบนำรายงานตัวบัณฑิต
+        <!-- <li class="list-group-item">4.รายละเอียดอื่นๆ เช่น ระบบการเช่าชุดครุย จองภาพหมู่บัณฑิต อยู่ในใบนำรายงานตัวบัณฑิต
         </li>
         <li class="list-group-item"> <a
-            href="assets/doc/form_next.pdf">ดาวน์โหลดแบบฟอร์มขอเลื่อนการเข้าร่วมพิธีพระราชทานปริญญาบัตร</a></li>
+            href="assets/doc/form_next.pdf">ดาวน์โหลดแบบฟอร์มขอเลื่อนการเข้าร่วมพิธีพระราชทานปริญญาบัตร</a></li> -->
       </ul>
 
     </div>
@@ -65,7 +65,7 @@
       <th class="text-center">#</th>
       <th class="text-center">รหัสนักศึกษา</th>
       <th class="text-center">ชื่อ-สกุล</th>
-      <th class="text-center">จองภาพหมู่บัณฑิต/เช่าชุดครุย/ยืนยันการเข้ารับ</th>
+      <!-- <th class="text-center">จองภาพหมู่บัณฑิต/เช่าชุดครุย/ยืนยันการเข้ารับ</th> -->
       <th class="text-center">รายละเอียด</th>
 
     </tr>
@@ -85,8 +85,9 @@
       <td class="text-left"> <a class="text-dark" [routerLink]="['view/', rec.STUDENT_ID]">
           {{rec.PNAME}}{{rec.FULLNAME}} </a></td>
       <!-- <td class="text-center"><a class="text-primary" [routerLink]="['view/', rec.STUDENT_ID]">จอง</a> </td> -->
-      <td class="text-center"> <a class="btn btn-primary"
-          href="https://db.snru.ac.th/bundit/check_access_v2.php?student_id={{rec.STUDENT_ID}}">คลิกเข้าระบบ</a> </td>
+
+          <!-- <td class="text-center"> <a class="btn btn-primary"
+            href="https://db.snru.ac.th/bundit/check_access_v2.php?student_id={{rec.STUDENT_ID}}">คลิกเข้าระบบ</a> </td> -->
       <td class="text-center"> <a class="text-primary" [routerLink]="['view/', rec.STUDENT_ID]"> <i
             class="fa fa-search"></i> </a> </td>
     </tr>
