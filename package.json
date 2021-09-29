@@ -23,7 +23,7 @@
     "@angular/router": "^5.2.0",
     "angular-datatables": "^4.2.0",
     "core-js": "^2.4.1",
-    "datatables.net": "^1.10.15",
+    "datatables.net": "^1.11.3",
     "datatables.net-dt": "^1.10.15",
     "jquery": "^3.2.1",
     "npm": "^5.7.1",
